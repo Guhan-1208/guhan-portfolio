@@ -1,0 +1,58 @@
+div{
+    
+
+   padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: buttontext;
+   background-color: rgba(240, 248, 255, 0.403);
+    text-decoration: none;
+    background-blend-mode: multiply;
+
+}
+ul{
+    text-align: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+    color: black;
+
+}
+ul li{
+    width: 250px;
+    margin: 25px;
+    padding: 0px;
+}
+body{
+    background-image:url(https://i0.wp.com/wallpapercave.com/wp/wp7203920.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+   
+    
+}
+.topic{
+    color: rgb(238, 225, 225);
+    text-align: center;
+    
+}
+.para{
+
+   text-align: justify;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   align-content: end;
+   padding-left: 50px;
+   padding-right: 50px;
+   color:black;
+}
+.paraout{
+    text-align: right;
+}
+li a {
+    text-decoration: none;
+    color:white; 
+}
+ 
+
+
+

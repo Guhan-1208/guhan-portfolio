@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographs</title>
+    <link rel="stylesheet" href="./photo.css">
+    
+</head>
+<body>
+    <h3>Photography</h3>
+        <div class="gallery">
+            <img src="./photograph/IMG_20241004_100938.jpg" alt="img">
+            <img src="./photograph/IMG_20241004_111031.jpg" alt="img">
+            <img src="./photograph/IMG_20241004_141032.jpg" alt="img">
+            <img src="./photograph/IMG_20241004_192409.jpg" alt="img">
+            <img src="./photograph/IMG_20241005_094453.jpg" alt="img">
+            <img src="./photograph/IMG_20241005_094629.jpg" alt="img">
+            <img src="./photograph/IMG_20241005_094631.jpg" alt="img">
+        </div>
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+        <script>
+            var modal = document.getElementById("imageModal");
+            
+            var images = document.querySelectorAll('.gallery img');
+            var modalImg = document.getElementById("modalImage");
+            
+            images.forEach((img) => {
+                img.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            });
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+ul {
+    list-style: circle;
+    color: white;
+    font-family: Arial;
+    padding-left: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 25px 0;
+}
+
+.outbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid black;
+    height: 450px;
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.outter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    padding-top: 100px;
+    background-image: url("./photos/contactbg.jpeg");
+    background-attachment: fixed;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    color: white;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: white; 
+}
+
+li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.outbox {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.outbox, li a {
+    transition: all 0.3s ease;
+}
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}

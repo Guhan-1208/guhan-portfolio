@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="web1.css">
+</head>
+<body class="outter">
+    <div class="box">
+        <div class="textbox">
+            <h1 class="topic">SIGN IN</h1><br><br><br>
+            <form action="#" method="post" class="form" onsubmit="return validateForm()">
+                <input class="text" type="name" placeholder="USER NAME">
+                <br>
+                <br>
+                <input class="text" type="email" placeholder="EMAIL">
+                <br>
+                <br>
+                <input class="text" type="password" placeholder="PASSWORD">
+                <br><br>
+                <a href="">Forgot Password</a><br><br>
+                <button>Login</button>
+                <button>Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const userNameInput = document.querySelector('input[type="name"]');
+            const emailInput = document.querySelector('input[type="email"]');
+            const passwordInput = document.querySelector('input[type="password"]');
+
+            if (!userNameInput.value || !emailInput.value || !passwordInput.value) {
+                alert("Please fill in all fields.");
+                return false; // Prevent form submission
+            }
+
+            // Additional validation logic can be added here if needed
+
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="websignup.css">
+    <style>
+        /* Add custom styles for buttons */
+        .box button {
+            padding: 10px 12px;
+            font-size: 15px;
+            background-color: #787e83;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        .box button:hover {
+            background-color: #9d04ef;
+        }
+    </style>
+</head>
+<body class="outter">
+    <div class="box">
+        <h1 class="topic">SIGN UP</h1><br><br>
+        
+        <!-- User registration fields -->
+        <input class="text" type="text" placeholder="NAME" id="userName">
+        <br><br>
+       
+        <input class="text" type="email" placeholder="EMAIL" id="userEmail">
+        <br><br>
+       
+        <input class="text" type="password" placeholder="PASSWORD" id="userPassword">
+        <br><br>
+       
+        <input class="text" type="password" placeholder="CONFIRM PASSWORD" id="confirmPassword">
+        <br><br>
+       
+        <!-- OTP input field -->
+        <input class="text" type="text" placeholder="ENTER OTP" id="userOTP">
+        <br><br><br>
+        
+        <!-- Generate OTP button -->
+        <button onclick="generateOTP()">Generate OTP</button><br><br>
+        
+        <!-- Sign Up button -->
+        <button onclick="verifyOTP()">Sign Up</button>
+        
+        <!-- Cancel button -->
+        <button>Cancel</button>
+    </div>
+
+    <script>
+        function generateOTP() {
+            // Call your server-side API to generate OTP and send it via email
+            // For demonstration purposes, let's assume the generated OTP is "123456"
+            const generatedOtp = "123456";
+            document.querySelector("#userOTP").value = generatedOtp;
+        }
+
+        function verifyOTP() {
+            const userName = document.querySelector("#userName").value;
+            const userEmail = document.querySelector("#userEmail").value;
+            const userPassword = document.querySelector("#userPassword").value;
+            const confirmPassword = document.querySelector("#confirmPassword").value;
+            const enteredOtp = document.querySelector("#userOTP").value;
+            const hardcodedOtp = "123456"; // Replace with your actual OTP value
+
+            if (!userName || !userEmail || !userPassword || !confirmPassword) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (enteredOtp === hardcodedOtp) {
+                alert("OTP verification successful! User registered.");
+                // You can redirect the user to another page or perform other actions here
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
