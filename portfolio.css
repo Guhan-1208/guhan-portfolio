@@ -128,7 +128,7 @@ footer ul li a {
     position: relative; 
     top: auto;
     right: auto;
-    transform: none;
+    transform: translateY(-50%);
 }
 p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
