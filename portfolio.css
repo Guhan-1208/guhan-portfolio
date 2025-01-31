@@ -125,7 +125,7 @@ footer ul li a {
     display: flex;
     align-items: center;
     justify-content: flex-end; 
-    position: relative; 
+    position:absolute; 
     top: 50%; 
     right: 10px; 
     transform: translateY(-50%);
