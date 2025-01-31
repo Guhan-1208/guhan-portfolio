@@ -126,8 +126,8 @@ footer ul li a {
     align-items: center;
     justify-content: flex-end; 
     position: relative; 
-    top: auto;
-    right: auto;
+    top: 50%; 
+    right: 10px; 
     transform: translateY(-50%);
 }
 p{
