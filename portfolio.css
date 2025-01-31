@@ -126,9 +126,9 @@ footer ul li a {
     align-items: center;
     justify-content: flex-end; 
     position: relative; 
-    top: 50%; 
-    right: 10px; 
-    transform: translateY(-50%);
+    top: auto;
+    right: auto;
+    transform: none;
 }
 p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
