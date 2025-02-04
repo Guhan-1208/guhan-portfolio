@@ -3,7 +3,6 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    
 }
 
 header {
@@ -38,12 +37,6 @@ nav ul li a {
 
 section {
     padding: 2rem 1rem;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .gallery {
@@ -130,10 +123,10 @@ footer ul li a {
     right: 10px; 
     transform: translateY(-50%);
 }
-p{
+p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.web{
+.web {
     max-width: 200px;
     max-height: 200px; 
     width: auto;
@@ -145,6 +138,69 @@ p{
     margin-bottom: 1rem;
     margin-top: 1rem; 
 }
- img:hover {
+img:hover {
     transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header, nav, section, footer {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    form input, form textarea {
+        width: 100%;
+    }
+    
+    form button {
+        width: 100%;
+    }
+    
+    .profile-container {
+        justify-content: center;
+        position: static;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header, nav, section, footer {
+        padding: 0.5rem;
+    }
+    
+    .gallery img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    form input, form textarea {
+        padding: 0.3rem;
+        font-size: 0.9rem;
+    }
+    
+    form button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .profile-photo img {
+        width: 80px;
+        height: 80px;
+    }
 }
