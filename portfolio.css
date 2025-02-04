@@ -142,7 +142,7 @@ img:hover {
     transform: scale(1.05);
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
     header, nav, section, footer {
         padding: 1rem;
