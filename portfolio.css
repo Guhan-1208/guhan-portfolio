@@ -5,12 +5,27 @@ body {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.header-nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    z-index: 1000;
+}
+
 header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
-    text-align: center;
-    position: relative; 
+    text-align: left; /* Align text to the left */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav {
@@ -20,23 +35,123 @@ nav {
     text-align: center;
 }
 
-nav ul {
+/* Desktop Navigation Styles */
+.desktop-nav {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-nav ul li {
-    display: inline;
+.desktop-nav li {
     margin: 0 10px;
 }
 
-nav ul li a {
+.desktop-nav li a {
     color: #fff;
     text-decoration: none;
 }
 
+/* Mobile Navigation Styles */
+.mobile-nav {
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    /* Hide desktop navigation and show mobile menu */
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: #444;
+        position: relative; /* Change position to relative */
+        width: 100%;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 1.3s ease-in-out, max-height 1.3s ease-in-out; /* Smoother effect */
+    }
+
+    .nav-toggle:checked ~ ul {
+        opacity: 1;
+        max-height: 250px; /* Adjust this value as needed */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Mobile gallery settings */
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+/* Styling for the profile container */
+.profile-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px; /* Adjust margin for right alignment */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust justify-content */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
 section {
     padding: 2rem 1rem;
+    margin-top: 100px;
 }
 
 .gallery {
@@ -48,14 +163,14 @@ section {
 
 .gallery img {
     max-width: 150px;
-    max-height: 150px; 
+    max-height: 150px;
     width: auto;
     height: auto;
-    flex-basis: calc(25% - 10px); 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: calc(25% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
 }
 
 .gallery img:hover {
@@ -71,7 +186,8 @@ form label {
     margin-bottom: 0.5rem;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
     font-size: 1rem;
@@ -107,98 +223,108 @@ footer ul li a {
     text-decoration: none;
 }
 
-.profile-photo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-    position:absolute; 
-    top: 50%; 
-    right: 10px; 
-    transform: translateY(-50%);
-}
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 .web {
     max-width: 200px;
-    max-height: 200px; 
+    max-height: 200px;
     width: auto;
     height: auto;
-    flex-basis: calc(25% - 10px); 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: calc(25% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
     margin-bottom: 1rem;
-    margin-top: 1rem; 
+    margin-top: 1rem;
 }
+
 img:hover {
     transform: scale(1.05);
 }
 
-
 @media (max-width: 768px) {
-    header, nav, section, footer {
-        padding: 1rem;
-        text-align: center;
+    .header-nav-wrapper {
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
+
+    header,
     
+    section,
+    footer {
+        padding: 1rem;
+        text-align: left; /* Align text to the left */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: relative; /* Change position to relative */
+        width: 100%;
+    }
+
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
-    
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-toggle:checked ~ ul {
+        display: flex;
+    }
+
     .gallery {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .gallery img {
         max-width: 100%;
         height: auto;
     }
-    
-    form input, form textarea {
+
+    form input,
+    form textarea {
         width: 100%;
     }
-    
+
     form button {
         width: 100%;
     }
-    
+
     .profile-container {
-        justify-content: center;
+        justify-content: space-between; /* Adjust justify-content for mobile */
         position: static;
         transform: none;
     }
 }
 
 @media (max-width: 480px) {
-    header, nav, section, footer {
+    header,
+    nav,
+    section,
+    footer {
         padding: 0.5rem;
     }
-    
+
     .gallery img {
         max-width: 100px;
         max-height: 100px;
     }
-    
-    form input, form textarea {
+
+    form input,
+    form textarea {
         padding: 0.3rem;
         font-size: 0.9rem;
     }
-    
+
     form button {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
-    
+
     .profile-photo img {
         width: 80px;
         height: 80px;

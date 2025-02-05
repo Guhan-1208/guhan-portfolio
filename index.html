@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
+  <div class="header-nav-wrapper">
     <header>
-        <h1>GUHAN K</h1>
-       
-        <div class="profile-container">
+      <h1>GUHAN K</h1>
+      <div class="profile-container">
         <div class="profile-photo">
-            <img src="./photos/profile-img.jpg.jpg" alt="Profile Photo">
+          <img src="./photos/profile-img.jpg.jpg" alt="Profile Photo">
         </div>
-    </div>
+      </div>
     </header>
-    
     <nav>
+      <ul class="desktop-nav">
+        <li><a href="about.html" target="_blank">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="profilecontact.html" target="_blank">Contact</a></li>
+      </ul>
+      <div class="mobile-nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
         <ul>
-            <li><a href="about.html" target="_blank">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="profilecontact.html" target="_blank">Contact</a></li>
+          <li><a href="about.html" target="_blank">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="profilecontact.html" target="_blank">Contact</a></li>
         </ul>
+      </div>
     </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hey there, I'm Guhan! I'm currently on a journey to earn my B.Tech degree.
-            <br> Alongside my academic pursuits, I've developed a deep passion for technology and the arts. <br>
-            As a full-stack developer, I have a solid foundation in creating dynamic web applications.
-             <br>Here you can find more <a href="about.html">about me.!!</a></p>
-        <h3>Skills</h3>
-        <ul>
-            <li>Programming Languages: HTML, CSS, JavaScript, Python.</li>
-            <li>Frameworks: React, Node.js.</li>
-            <li>Tools: Adobe Aftereffects,Capcut Desktop.</li>
-        </ul>
-    </section>
-    
+  </div>
+  <br><br>
+
+  <section id="about">
+    <br><br>
+    <h2>About Me</h2>
+    <p>Hey there, I'm Guhan! I'm currently on a journey to earn my B.Tech degree. <br>
+         Alongside my academic pursuits, I've developed a deep passion for technology and the arts. <br>
+          As a full-stack developer, I have a solid foundation in creating dynamic web applications.
+         <br>Here you can find more <a href="about.html">about me.!!</a></p>
+  </section>
+    <h3>Skills</h3>
+    <ul>
+        <li>Programming Languages: HTML, CSS, JavaScript, Python.</li>
+        <li>Frameworks: React, Node.js.</li>
+        <li>Tools: Adobe Aftereffects, Capcut Desktop.</li>
+    </ul>
     <section id="projects">
         <h2>Projects</h2>
         <h3>Web Development</h3>
@@ -114,5 +126,16 @@
             <li><a href="https://www.instagram.com/guhan.insta/" target="_blank">Instagram</a></li>
         </ul>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdown-menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
