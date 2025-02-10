@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background:gray;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .certificate {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .certificate img {
+            max-width: 150px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .description {
+            margin-top: 0;
+            font-family: 'Gill Sans MT';
+            color: white;
+            line-height: 150%;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: 15% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .certificate {
+                padding: 10px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .certificate img {
+                margin: 0 0 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .certificate {
+                padding: 5px;
+            }
+            .description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="color: white;">Certificate Gallery</h1><br>
+
+ <div class="certificate">
+        <img src="./certificates/web development internship.jpeg" alt="Certificate 1" onclick="openModal(this.src)">
+        <p class="description">I am thrilled to share that I have successfully completed an internship program at Layercodes Technologies! <br>
+             This incredible opportunity allowed me to dive into the "Concepts of Digital Marketing & Web Development." <br>
+
+            I am grateful to Shagul Sardar, Founder and CEO of Layercodes Technologies, and the entire team for their support and guidance throughout this journey. <br> <br>
+            
+            Certificate Details:  <br>
+            
+            Recipient: Guhan K, 3rd Year B.Tech (Information Technology) student at Mailam Engineering College <br>
+            
+            Duration: 3rd February 2025 to 5th March 2025 <br>
+            
+            Issued by: Layercodes Technologies <br>
+            
+            Location: Villupuram <br>
+            
+            Excited to apply these skills in my future projects and continue my journey in tech!</p> <br>
+    </div>
+
+    <div class="certificate">
+        <img src="./certificates/AICTE - AIML.jpeg" alt="Certificate 2" onclick="openModal(this.src)">
+        <p class="description">I'm thrilled to share that I have successfully completed a 10-week AI-ML Virtual Internship supported by the India Edu Program and Google for Developers. <br>
+            This opportunity allowed me to enhance my skills and knowledge in AI and Machine Learning. <br>
+             Special thanks to AICTE, EduSkills, and all mentors who guided me throughout this journey. 🧠✨<br>
+
+            Certificate issued by: <br><br>
+            
+            AICTE
+            <br>
+            EduSkills
+            <br>
+            National Internship Portal</p>
+            <br>
+    </div>
+
+    <div class="certificate">
+        <img src="./certificates/full stack development.jpeg" alt="Certificate 3" onclick="openModal(this.src)">
+        <p class="description">I'm excited to share that I have completed a 6-day Value Added Course on Full Stack Development at Mailam Engineering College, in collaboration with VEI Technologies Pvt Ltd. <br>
+             This experience has significantly enhanced my technical skills and broadened my understanding of full stack development.
+
+            Special thanks to Dr. B. Ezhilavan from VEI Technologies, Dr. S. Kalaivany (HOD/IT), and Dr. R. Rajappan (Principal of Mailam Engineering College) for their invaluable guidance and support. 🛠️💻 <br><br>
+            
+            Certificate issued by: <br>
+            
+            Mailam Engineering College <br>
+            
+            VEI Technologies Pvt Ltd</p> <br>
+    </div>
+
+    <div class="certificate">
+        <img src="./certificates/html5.jpeg" alt="Certificate 4" onclick="openModal(this.src)">
+        <p class="description">Excited to share that I've successfully completed the certification in HTML5 Application Development! 🚀 <br>
+             This journey has equipped me with the skills and knowledge to develop cutting-edge web applications. <br>
+
+            A big thank you to Certiport, CertNexus, and Pearson VUE for this opportunity. <br>
+             Looking forward to applying these skills in future projects! <br><br>
+            
+            Certificate Details:
+            <br>
+            Certificate ID: dsB9-DkTL <br>
+            
+            Date Awarded: October 26, 2024</p> <br>
+    </div>
+
+    <div class="certificate">
+        <img src="./certificates/ibm.jpeg" alt="Certificate 5" onclick="openModal(this.src)">
+        <p class="description">I'm excited to share that I've successfully completed the "Journey to Cloud: Envisioning Your Solution" course from IBM SkillsBuild! 🌥️ <br>
+             This certification has deepened my understanding of cloud solutions and their potential. <br>
+              Many thanks to IBM SkillsBuild for this opportunity. <br><br>
+
+            Certificate Details: <br>
+            
+            Issued by: IBM SkillsBuild <br>
+            
+            Issued on: 16th September 2024</p> <br>
+    </div>
+
+    <div class="certificate">
+        <img src="./certificates/ML internship.jpeg" alt="Certificate 6" onclick="openModal(this.src)">
+        <p class="description">I'm excited to share that I have successfully completed a 30-day industry internship on "Machine Learning" at VEI Technologies Pvt. Ltd. <br>
+            This experience provided me with valuable insights and practical knowledge in the field of Machine Learning. <br>
+            Special thanks to Dr. B. Ezhilavan and everyone at VEI Technologies for their guidance and support. <br> <br>
+
+            Certificate Details: <br>
+            
+            Issued by: VEI Technologies Pvt. Ltd. <br>
+            
+            Duration: March 1, 2024, to April 1, 2024 <br>
+            
+            Institution: Mailam Engineering College</p> <br>
+    </div>
+
+    <div class="certificate">
+        <img src="./certificates/mongodb.jpeg" alt="Certificate 7" onclick="openModal(this.src)">
+        <p class="description">Excited to share that I have successfully completed the "Introduction to MongoDB" course! 🚀 <br>
+            This certification has enhanced my understanding of MongoDB and its applications in database management. <br>
+
+            Special thanks to MongoDB, Inc. for providing this opportunity and to Sahir Azam, CPO of MongoDB, Inc., for the recognition. <br><br>
+            
+            Certificate Details: <br>
+            
+            Course: Introduction to MongoDB <br>
+            
+            Issued by: MongoDB, Inc. <br></p> <br>
+    </div>
+
+   
+
+    <!-- Add more certificates as needed -->
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<script>
+function openModal(src) {
+    document.getElementById("myModal").style.display = "block";
+    document.getElementById("img01").src = src;
+}
+
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
