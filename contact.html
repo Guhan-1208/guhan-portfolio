@@ -9,10 +9,11 @@
     <style>
         /* From Uiverse.io by Praashoo7 */
         /* HOLD THE ASTRONAUT */
-        body{
+        body {
             background-color: #171717;
             color: white;
         }
+
         .card {
             position: fixed;
             width: 100%;
@@ -403,6 +404,42 @@
                 opacity: 0;
             }
         }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+                height: auto;
+                padding: 1em;
+            }
+
+            .card img {
+                width: 80%;
+                margin: 0;
+            }
+
+            .icons svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+                height: auto;
+                padding: 1em;
+            }
+
+            .card img {
+                width: 70%;
+                margin: 0;
+            }
+
+            .icons svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -410,7 +447,9 @@
     <!-- From Uiverse.io by Praashoo7 -->
     <div class="card">
         <img src="https://uiverse.io/astronaut.png" alt="" class="image" />
-        <div class="heading"><h2>We're on Social Media</h2></div>
+        <div class="heading">
+            <h2>We're on Social Media</h2>
+        </div>
         <div class="icons">
             <a href="https://www.instagram.com/guhan.insta/" target="_blank" class="instagram">
                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
