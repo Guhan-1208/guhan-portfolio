@@ -3,20 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact details</title>
-    <link rel="stylesheet" href="profilecontact.css">
+    <title>Contact Details </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Optional: Add custom styles here if needed */
+        body {
+            background-color: #f0f2f5; /* Light gray background */
+        }
+        .contact-card {
+            max-width: 500px; /* Limit width on larger screens */
+            margin: auto; /* Center the card */
+        }
+        /* Style icons slightly */
+        .list-group-item i {
+            font-size: 1.2rem;
+            vertical-align: middle;
+        }
+    </style>
 </head>
-<body class="outter">
-   <div class="outbox">
-       <h3>CONTACT DETAILS</h3><br><br>
-       <div class="contact-box">
-           <ul>
-               <li><a href="https://Wa.me/+916385233472">Whatsapp</a></li>
-               <li><a href="https://www.instagram.com/guhan.insta/">Instagram</a></li>
-               <li><a href="#">Discord</a></li>
-               <li><a href="#">Email</a></li>
-           </ul>
+<body>
+
+   <div class="container py-5">
+       <!-- Using a card for better visual structure -->
+       <div class="card shadow-sm contact-card">
+           <div class="card-body p-4 p-md-5">
+                <h3 class="card-title text-center mb-4">CONTACT DETAILS</h3>
+
+                <!-- Using Bootstrap List Group for links -->
+                <div class="list-group list-group-flush">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/+916385233472" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-whatsapp me-3 text-success"></i> <!-- Icon -->
+                        <span>Whatsapp</span>
+                        <i class="bi bi-box-arrow-up-right ms-auto text-muted small"></i> <!-- External link icon -->
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/guhan.insta/" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-instagram me-3" style="color: #E4405F;"></i> <!-- Icon with custom color -->
+                        <span>Instagram</span>
+                        <i class="bi bi-box-arrow-up-right ms-auto text-muted small"></i> <!-- External link icon -->
+                    </a>
+                    <!-- Discord -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-discord me-3" style="color: #7289DA;"></i> <!-- Icon with custom color -->
+                        <span>Discord</span> <!-- Replace '#' with your actual Discord link -->
+                        <i class="bi bi-box-arrow-up-right ms-auto text-muted small"></i> <!-- External link icon -->
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:your_email@example.com" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <i class="bi bi-envelope-fill me-3 text-secondary"></i> <!-- Icon -->
+                        <span>Email</span> <!-- Replace '#' with 'mailto:your_email@example.com' -->
+                        <i class="bi bi-box-arrow-up-right ms-auto text-muted small"></i> <!-- External link icon -->
+                    </a>
+                </div>
+           </div>
        </div>
    </div>
+
+   <!-- Bootstrap Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

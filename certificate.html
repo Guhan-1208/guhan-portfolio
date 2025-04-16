@@ -5,280 +5,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
+            /* Consider adding a fallback background color */
             background-image: url(./photos/Best\ 4K\ Wallpapers\ for\ Desktop\ -\ 8K\ Images\ and\ Backgrounds.jpg);
             background-attachment: fixed;
-            margin: 0;
-            padding: 20px;
+            background-size: cover; /* Ensures the image covers the background */
+            background-position: center; /* Centers the image */
+            padding-top: 20px; /* Add padding if navbar is ever added */
+            padding-bottom: 20px;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-
-            
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: transparent;
+        .blurred-container {
+             /* Max-width handled by Bootstrap .container */
+            background-color: rgba(0, 0, 0, 0.2); /* Darker semi-transparent background */
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            border: 2px solid black;
-
-            
-            box-sizing: border-box;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5); /* Lighter border for contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            /* Flex behavior handled by Bootstrap utilities */
+            /* Padding handled by Bootstrap utilities */
         }
 
-        .certificate {
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .certificate img {
+        .certificate-img {
             max-width: 150px;
-            margin-right: 20px;
+            height: auto; /* Maintain aspect ratio */
             cursor: pointer;
+            border: 1px solid #ddd; /* Optional: keep a slight border on thumbnail */
+            padding: 2px; /* Optional: padding around thumbnail */
+            background-color: white; /* Ensure transparent parts of cert aren't lost */
         }
 
         .description {
-            margin-top: 0;
-            font-family: 'Gill Sans MT';
+            /* font-family: 'Gill Sans MT', sans-serif; */ /* Use Bootstrap default or override if needed */
             color: white;
-            line-height: 150%;
+            line-height: 1.5; /* Adjusted from 150% */
+            font-size: 0.95rem; /* Slightly adjust size if needed */
         }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
+        /* Ensure modal background is sufficiently dark */
+        .modal-backdrop {
             background-color: rgba(0, 0, 0, 0.8);
         }
-
-        .modal-content {
-            margin: 15% auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
+         /* Style modal close button for visibility */
+         .modal-header .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%); /* Make it white */
+        }
+        /* Center modal content vertically */
+        .modal-dialog-centered {
+             min-height: calc(100% - 1rem); /* Adjust based on Bootstrap version/needs */
         }
 
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
 
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .certificate {
-                padding: 10px;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .certificate img {
-                margin: 0 0 10px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .certificate {
-                padding: 5px;
-            }
-
-            .description {
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1 style="color: white;">Certificate Gallery</h1><br>
+    <div class="container blurred-container py-5 d-flex flex-column align-items-center">
+        <h1 class="text-white mb-4">Certificate Gallery</h1>
 
-        <div class="certificate">
-            <img src="./certificates/web development internship.jpeg" alt="Certificate 1" onclick="openModal(this.src)">
-            <p class="description">I am thrilled to share that I have successfully completed an internship program at
-                Layercodes Technologies! <br>
-                This incredible opportunity allowed me to dive into the "Concepts of Digital Marketing & Web
-                Development." <br>
-
-                I am grateful to Shagul Sardar, Founder and CEO of Layercodes Technologies, and the entire team for
-                their support and guidance throughout this journey. <br> <br>
-
-                Certificate Details: <br>
-
-                Recipient: Guhan K, 3rd Year B.Tech (Information Technology) student at Mailam Engineering College <br>
-
-                Duration: 3rd February 2025 to 5th March 2025 <br>
-
-                Issued by: Layercodes Technologies <br>
-
-                Location: Villupuram <br>
-
-                Excited to apply these skills in my future projects and continue my journey in tech!</p> <br>
+        <!-- Certificate 1 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+            <img src="./certificates/web development internship.jpeg"
+                 alt="Web Development Internship Certificate"
+                 class="certificate-img me-md-3 mb-3 mb-md-0"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imageModal"
+                 data-src="./certificates/web development internship.jpeg">
+            <div class="description">
+                <p>I am thrilled to share that I have successfully completed an internship program at
+                    Layercodes Technologies! <br>
+                    This incredible opportunity allowed me to dive into the "Concepts of Digital Marketing & Web
+                    Development." <br>
+                    I am grateful to Shagul Sardar, Founder and CEO of Layercodes Technologies, and the entire team for
+                    their support and guidance throughout this journey. <br> <br>
+                    <strong>Certificate Details:</strong> <br>
+                    Recipient: Guhan K, 3rd Year B.Tech (Information Technology) student at Mailam Engineering College <br>
+                    Duration: 3rd February 2025 to 5th March 2025 <br>
+                    Issued by: Layercodes Technologies <br>
+                    Location: Villupuram <br>
+                    Excited to apply these skills in my future projects and continue my journey in tech!
+                </p>
+            </div>
         </div>
 
-        <div class="certificate">
-            <img src="./certificates/AICTE - AIML.jpeg" alt="Certificate 2" onclick="openModal(this.src)">
-            <p class="description">I'm thrilled to share that I have successfully completed a 10-week AI-ML Virtual
-                Internship supported by the India Edu Program and Google for Developers. <br>
-                This opportunity allowed me to enhance my skills and knowledge in AI and Machine Learning. <br>
-                Special thanks to AICTE, EduSkills, and all mentors who guided me throughout this journey. 🧠✨<br>
-<br>
-                Certificate issued by: <br>
-
-                AICTE
-                <br>
-                EduSkills
-                <br>
-                National Internship Portal
-            </p>
-            <br>
+        <!-- Certificate 2 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+            <img src="./certificates/AICTE - AIML.jpeg"
+                 alt="AI-ML Virtual Internship Certificate"
+                 class="certificate-img me-md-3 mb-3 mb-md-0"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imageModal"
+                 data-src="./certificates/AICTE - AIML.jpeg">
+            <div class="description">
+                <p>I'm thrilled to share that I have successfully completed a 10-week AI-ML Virtual
+                    Internship supported by the India Edu Program and Google for Developers. <br>
+                    This opportunity allowed me to enhance my skills and knowledge in AI and Machine Learning. <br>
+                    Special thanks to AICTE, EduSkills, and all mentors who guided me throughout this journey. 🧠✨<br><br>
+                    <strong>Certificate issued by:</strong> <br>
+                    AICTE <br>
+                    EduSkills <br>
+                    National Internship Portal
+                </p>
+            </div>
         </div>
 
-        <div class="certificate">
-            <img src="./certificates/full stack development.jpeg" alt="Certificate 3" onclick="openModal(this.src)">
-            <p class="description">I'm excited to share that I have completed a 6-day Value Added Course on Full Stack
-                Development at Mailam Engineering College, in collaboration with VEI Technologies Pvt Ltd. <br>
-                This experience has significantly enhanced my technical skills and broadened my understanding of full
-                stack development.
-
-                Special thanks to Dr. B. Ezhilavan from VEI Technologies, Dr. S. Kalaivany (HOD/IT), and Dr. R. Rajappan
-                (Principal of Mailam Engineering College) for their invaluable guidance and support. 🛠️💻 <br><br>
-
-                Certificate issued by: <br>
-
-                Mailam Engineering College <br>
-
-                VEI Technologies Pvt Ltd</p> <br>
+        <!-- Certificate 3 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+            <img src="./certificates/full stack development.jpeg"
+                 alt="Full Stack Development Course Certificate"
+                 class="certificate-img me-md-3 mb-3 mb-md-0"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imageModal"
+                 data-src="./certificates/full stack development.jpeg">
+             <div class="description">
+                <p>I'm excited to share that I have completed a 6-day Value Added Course on Full Stack
+                    Development at Mailam Engineering College, in collaboration with VEI Technologies Pvt Ltd. <br>
+                    This experience has significantly enhanced my technical skills and broadened my understanding of full
+                    stack development. <br>
+                    Special thanks to Dr. B. Ezhilavan from VEI Technologies, Dr. S. Kalaivany (HOD/IT), and Dr. R. Rajappan
+                    (Principal of Mailam Engineering College) for their invaluable guidance and support. 🛠️💻 <br><br>
+                    <strong>Certificate issued by:</strong> <br>
+                    Mailam Engineering College <br>
+                    VEI Technologies Pvt Ltd
+                </p>
+            </div>
         </div>
 
-        <div class="certificate">
-            <img src="./certificates/html5.jpeg" alt="Certificate 4" onclick="openModal(this.src)">
-            <p class="description">Excited to share that I've successfully completed the certification in HTML5
-                Application Development! 🚀 <br>
-                This journey has equipped me with the skills and knowledge to develop cutting-edge web applications.
-                <br>
-
-                A big thank you to Certiport, CertNexus, and Pearson VUE for this opportunity. <br>
-                Looking forward to applying these skills in future projects! <br><br>
-
-                Certificate Details:
-                <br>
-                Certificate ID: dsB9-DkTL <br>
-
-                Date Awarded: October 26, 2024
-            </p> <br>
+        <!-- Certificate 4 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+            <img src="./certificates/html5.jpeg"
+                 alt="HTML5 Application Development Certificate"
+                 class="certificate-img me-md-3 mb-3 mb-md-0"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imageModal"
+                 data-src="./certificates/html5.jpeg">
+             <div class="description">
+                <p>Excited to share that I've successfully completed the certification in HTML5
+                    Application Development! 🚀 <br>
+                    This journey has equipped me with the skills and knowledge to develop cutting-edge web applications. <br>
+                    A big thank you to Certiport, CertNexus, and Pearson VUE for this opportunity. <br>
+                    Looking forward to applying these skills in future projects! <br><br>
+                    <strong>Certificate Details:</strong> <br>
+                    Certificate ID: dsB9-DkTL <br>
+                    Date Awarded: October 26, 2024
+                </p>
+            </div>
         </div>
 
-        <div class="certificate">
-            <img src="./certificates/ibm.jpeg" alt="Certificate 5" onclick="openModal(this.src)">
-            <p class="description">I'm excited to share that I've successfully completed the "Journey to Cloud:
-                Envisioning Your Solution" course from IBM SkillsBuild! 🌥️ <br>
-                This certification has deepened my understanding of cloud solutions and their potential. <br>
-                Many thanks to IBM SkillsBuild for this opportunity. <br><br>
-
-                Certificate Details: <br>
-
-                Issued by: IBM SkillsBuild <br>
-
-                Issued on: 16th September 2024</p> <br>
+        <!-- Certificate 5 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+            <img src="./certificates/ibm.jpeg"
+                 alt="IBM SkillsBuild Cloud Certificate"
+                 class="certificate-img me-md-3 mb-3 mb-md-0"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imageModal"
+                 data-src="./certificates/ibm.jpeg">
+             <div class="description">
+                <p>I'm excited to share that I've successfully completed the "Journey to Cloud:
+                    Envisioning Your Solution" course from IBM SkillsBuild! 🌥️ <br>
+                    This certification has deepened my understanding of cloud solutions and their potential. <br>
+                    Many thanks to IBM SkillsBuild for this opportunity. <br><br>
+                    <strong>Certificate Details:</strong> <br>
+                    Issued by: IBM SkillsBuild <br>
+                    Issued on: 16th September 2024
+                </p>
+            </div>
         </div>
 
-        <div class="certificate">
-            <img src="./certificates/ML internship.jpeg" alt="Certificate 6" onclick="openModal(this.src)">
-            <p class="description">I'm excited to share that I have successfully completed a 30-day industry internship
-                on "Machine Learning" at VEI Technologies Pvt. Ltd. <br>
-                This experience provided me with valuable insights and practical knowledge in the field of Machine
-                Learning. <br>
-                Special thanks to Dr. B. Ezhilavan and everyone at VEI Technologies for their guidance and support. <br>
-                <br>
-
-                Certificate Details: <br>
-
-                Issued by: VEI Technologies Pvt. Ltd. <br>
-
-                Duration: March 1, 2024, to April 1, 2024 <br>
-
-                Institution: Mailam Engineering College</p> <br>
+        <!-- Certificate 6 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+            <img src="./certificates/ML internship.jpeg"
+                 alt="Machine Learning Internship Certificate"
+                 class="certificate-img me-md-3 mb-3 mb-md-0"
+                 data-bs-toggle="modal"
+                 data-bs-target="#imageModal"
+                 data-src="./certificates/ML internship.jpeg">
+             <div class="description">
+                <p>I'm excited to share that I have successfully completed a 30-day industry internship
+                    on "Machine Learning" at VEI Technologies Pvt. Ltd. <br>
+                    This experience provided me with valuable insights and practical knowledge in the field of Machine
+                    Learning. <br>
+                    Special thanks to Dr. B. Ezhilavan and everyone at VEI Technologies for their guidance and support. <br><br>
+                    <strong>Certificate Details:</strong> <br>
+                    Issued by: VEI Technologies Pvt. Ltd. <br>
+                    Duration: March 1, 2024, to April 1, 2024 <br>
+                    Institution: Mailam Engineering College
+                </p>
+            </div>
         </div>
 
-        <div class="certificate">
-            <img src="./certificates/mongodb.jpeg" alt="Certificate 7" onclick="openModal(this.src)">
-            <p class="description">Excited to share that I have successfully completed the "Introduction to MongoDB"
-                course! 🚀 <br>
-                This certification has enhanced my understanding of MongoDB and its applications in database management.
-                <br>
-
-                Special thanks to MongoDB, Inc. for providing this opportunity and to Sahir Azam, CPO of MongoDB, Inc.,
-                for the recognition. <br><br>
-
-                Certificate Details: <br>
-
-                Course: Introduction to MongoDB <br>
-
-                Issued by: MongoDB, Inc. <br></p> <br>
+        <!-- Certificate 7 -->
+        <div class="certificate d-flex flex-column flex-md-row align-items-center border rounded p-3 mb-4 w-100 bg-dark bg-opacity-25">
+             <img src="./certificates/mongodb.jpeg"
+                  alt="MongoDB Introduction Certificate"
+                  class="certificate-img me-md-3 mb-3 mb-md-0"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-src="./certificates/mongodb.jpeg">
+             <div class="description">
+                 <p>Excited to share that I have successfully completed the "Introduction to MongoDB"
+                     course! 🚀 <br>
+                     This certification has enhanced my understanding of MongoDB and its applications in database management. <br>
+                     Special thanks to MongoDB, Inc. for providing this opportunity and to Sahir Azam, CPO of MongoDB, Inc.,
+                     for the recognition. <br><br>
+                     <strong>Certificate Details:</strong> <br>
+                     Course: Introduction to MongoDB <br>
+                     Issued by: MongoDB, Inc. <br>
+                 </p>
+             </div>
         </div>
 
+        <!-- Add more certificates following the pattern above -->
 
-
-        <!-- Add more certificates as needed -->
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="img01">
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- modal-lg for larger view, modal-dialog-centered to center vertically -->
+            <div class="modal-content bg-transparent border-0"> <!-- Transparent background for content area to show backdrop -->
+                 <div class="modal-header border-0">
+                    <!-- Optional: Add a title like <h5 class="modal-title text-white" id="imageModalLabel">Certificate View</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                <div class="modal-body text-center"> <!-- text-center to center image if smaller than modal -->
+                    <img src="" id="modalImage" class="img-fluid" alt="Certificate Large View"> <!-- img-fluid makes image responsive within modal -->
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     <script>
-        function openModal(src) {
-            document.getElementById("myModal").style.display = "block";
-            document.getElementById("img01").src = src;
-        }
+        // Get the modal element
+        var imageModal = document.getElementById('imageModal');
+        // Get the image element inside the modal
+        var modalImage = document.getElementById('modalImage');
 
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
+        // Add event listener for when the modal is about to be shown
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var triggerElement = event.relatedTarget;
+            // Extract image source from data-src attribute
+            var imageSource = triggerElement.getAttribute('data-src');
+            // Update the modal's image source
+            modalImage.src = imageSource;
+        });
+
+         // Optional: Clear the src when modal is hidden to prevent showing old image briefly if network is slow
+         imageModal.addEventListener('hidden.bs.modal', function () {
+            modalImage.src = "";
+        });
     </script>
 
 </body>
-
 </html>
