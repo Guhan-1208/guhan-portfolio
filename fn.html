@@ -1,111 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="topic"><h1>Fortnite </h1> </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fortnite Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <style>
- e-caption {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    p {
-        text-align: justify;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 30px;
-    }
-    body{
-        background-image: url(https://www.yummytabs.com/assets/fortnite/backgrounds/default.jpg);
-        background-size: cover;
+    body {
+      background-image: url(https://www.yummytabs.com/assets/fortnite/backgrounds/default.jpg);
+      background-size: cover;
       background-attachment: fixed;
-        
+      backdrop-filter: blur(10px);
+      color: white;
     }
 
-    body{
-        background-color:transparent;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 2px solid black;
+    .content p {
+      text-align: justify;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 30px;
     }
-    .topic{
-        text-align: center;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       
-    }
-    .team{
-        padding-left: 50px;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .box button {
-    padding: 10px 12px;
-    font-size: 15px;
-    background-color: #0074D9;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 20px;
-}
 
-.box button:hover {
-    background-color: #9d04ef;
-}
-.button{
-    align-items: center;
-    align-content: center;
-}
+    .form-label, .form-control {
+      color: white;
+    }
 
-  .end{
-    text-align: center;
-  }  
-   
+    .form-control::placeholder {
+      color: #ccc;
+    }
+
+    .btn-custom {
+      background-color: #0074D9;
+      color: white;
+      border-radius: 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #9d04ef;
+    }
+
+    .end {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+    }
   </style>
 </head>
 <body>
-    <div class="image">
-            <img src="https://cdn2.unrealengine.com/7up-3840x2160-c93d04c02c26.jpg" alt="Image 1" width="300" height="200">
-    
-      
-        <!-- Add detailed content about Free Fire here -->
-        <div class="content">
-            
-        <p>Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in six distinct game mode versions that otherwise share the same general gameplay and game engine: Fortnite Battle Royale, a free-to-play battle royale game in which up to 100 players fight to be the last person standing; Fortnite: Save the World, a cooperative hybrid tower defense-shooter and survival game in which up to four players fight off zombie-like creatures and defend objects with traps and fortifications they can build; and Fortnite Creative, in which players are given complete freedom to create worlds and battle arenas, Lego Fortnite, an open world survival game, Rocket Racing, a racing game, and Fortnite Festival, a rhythm game.
 
-            Save the World and Battle Royale were released in 2017 as early access titles, while Creative was released on December 6, 2018. While the Save the World and Creative versions have been successful for Epic Games, Fortnite Battle Royale in particular became an overwhelming success and a cultural phenomenon, drawing more than 125 million players in less than a year, earning hundreds of millions of dollars per month. Fortnite as a whole generated $9 billion in gross revenue up until December 2019, and it has been listed among the greatest games of all time.
-        </p>
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h1 class="text-white">Fortnite</h1>
+    </div>
+
+    <div class="text-center mb-4">
+      <img src="https://cdn2.unrealengine.com/7up-3840x2160-c93d04c02c26.jpg" alt="Fortnite Image" class="img-fluid" width="300" />
+    </div>
+
+    <div class="content mb-5 px-3">
+      <p>
+        Fortnite is an online video game and game platform developed by Epic Games and released in 2017. It is available in six distinct game mode versions: Fortnite Battle Royale, Save the World, Creative, Lego Fortnite, Rocket Racing, and Fortnite Festival. Battle Royale especially became a cultural phenomenon, drawing over 125 million players in its first year and generating billions in revenue.
+      </p>
+    </div>
+
+    <div class="card p-4">
+      <h2 class="text-white mb-4">TEAM/SQUAD REGISTRATION</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Player 1 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 1 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 1 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 1 UID">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 2 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 2 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 2 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 2 UID">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 3 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 3 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 3 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 3 UID">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 4 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 4 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 4 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 4 UID">
+          </div>
         </div>
-        <!-- Customize the layout and styling as needed -->
-    
-    <div class="team">
-        <h2>TEAM/SQUAD REGISTRATION</h2>
-        <label for="name">PLAYER 1 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 1 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 2 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 2 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 3 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 3 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 4 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 4 UID</label>
-        <input type="text"><br><br>
-        <button class="button">sumit</button>
-        <button class="button">cancel</button>
-        
+
+        <div class="mt-4 d-flex gap-3">
+          <button type="submit" class="btn btn-custom">Submit</button>
+          <button type="reset" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
     </div>
-    <h1 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h1>
-    </div>
+
+    <h3 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h3>
+  </div>
+
 </body>
 </html>

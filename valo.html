@@ -1,117 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="topic"><h1>Valorant</h1> </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Registration</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <style>
- e-caption {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    p {
-        text-align: justify;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 30px;
-    }
-    body{
-        background-image: url(https://th.bing.com/th/id/OIP.GSnO2Eie9NtsS83kIh-67QHaEK?rs=1&pid=ImgDetMain);
-        background-size: cover;
-        background-attachment: fixed;
-      
-        
+    body {
+      background-image: url('https://th.bing.com/th/id/OIP.GSnO2Eie9NtsS83kIh-67QHaEK?rs=1&pid=ImgDetMain');
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
     }
 
-    body{
-        background-color:transparent;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 2px solid black;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
     }
-    .topic{
-        text-align: center;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       
-    }
-    .team{
-        padding-left: 50px;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .box button {
-    padding: 10px 12px;
-    font-size: 15px;
-    background-color: #0074D9;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 20px;
-}
 
-.box button:hover {
-    background-color: #9d04ef;
-}
-.button{
-    align-items: center;
-    align-content: center;
-}
+    .card-img-top {
+      border-radius: 15px;
+      max-height: 200px;
+      object-fit: cover;
+    }
 
-  .end{
-    text-align: center;
-    color: white;
-  }  
-   
+    .form-label {
+      color: white;
+    }
+
+    .btn-custom {
+      background-color: #0074D9;
+      border-radius: 20px;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #9d04ef;
+    }
+
+    .end {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+    }
+
+    .topic {
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+    }
   </style>
 </head>
 <body>
-    <div class="image">
-            <img src="https://images.hdqwalls.com/wallpapers/valorant-phoenix-and-jett-4k-uu.jpg" alt="Image 1" width="300" height="200">
-    
-      
-        <!-- Add detailed content about Free Fire here -->
-        <div class="content">
-            
-        <p>Valorant is a team-based first-person tactical hero shooter set in the near future.
-             Players play as one of a set of Agents, characters based on several countries and cultures around the world.
-             In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it. Agents have unique abilities, each requiring charges, as well as a unique ultimate ability that requires charging through kills, deaths, orbs, or objectives. Every player starts each round with a "classic" pistol and one or more "signature ability" charges.
-              Other weapons and ability charges can be purchased using an in-game economic system that awards money based on the outcome of the previous round, any kills the player is responsible for, and any objectives completed. The game has an assortment of weapons including secondary guns like sidearms and primary guns like submachine guns, shotguns, machine guns, assault rifles and sniper rifles.
-               There are automatic and semi-automatic weapons that each have a unique shooting pattern that has to be controlled by the player to be able to shoot accurately.
-               It currently offers 23 agents to choose from. The player will get 5 unlocked agents when they create their account, and will have to unlock the rest of the agents by collecting an in-game currency called Kingdom Credits. Kingdom Credits can be acquired by playing games or completing daily and weekly tasks, and can be spent on unlocking new agents or cosmetic items. However, within the first 28 days of release, new Agents can only be unlocked with Valorant Points (VP), Agent Recruitment Events, or by having a linked and active Xbox Game Pass subscription. VP is an in-game currency that can only obtained by purchasing it with real money,and it can be spent on cosmetic items or new agents.
 
-        </p>
+  <div class="container overlay">
+    <h1 class="topic">Valorant</h1>
+
+    <div class="text-center mb-4">
+      <img src="https://images.hdqwalls.com/wallpapers/valorant-phoenix-and-jett-4k-uu.jpg" class="img-fluid rounded" alt="Valorant Image">
+    </div>
+
+    <p class="mb-4">
+      Valorant is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, characters based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team, each team having five players. Agents have unique abilities, each requiring charges, as well as an ultimate ability. The game has an assortment of weapons and an economic system to help players purchase additional abilities and weapons.
+    </p>
+
+    <h3 class="text-white mb-3">Team/Squad Registration</h3>
+
+    <form>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 1 NAME</label>
+          <input type="text" class="form-control" />
         </div>
-        <!-- Customize the layout and styling as needed -->
-    
-    <div class="team">
-        <h2>TEAM/SQUAD REGISTRATION</h2>
-        <label for="name">PLAYER 1 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 1 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 2 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 2 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 3 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 3 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 4 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 4 UID</label>
-        <input type="text"><br><br>
-        <button class="button">sumit</button>
-        <button class="button">cancel</button>
-        
-    </div>
-    <h1 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h1>
-    </div>
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 1 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 2 NAME</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 2 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 3 NAME</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 3 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 4 NAME</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">PLAYER 4 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center gap-3">
+        <button type="submit" class="btn btn-custom">Submit</button>
+        <button type="reset" class="btn btn-outline-light">Cancel</button>
+      </div>
+    </form>
+
+    <h2 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h2>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

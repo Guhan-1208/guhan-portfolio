@@ -1,112 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="topic"><h1>League Of Legends </h1> </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>League of Legends Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
- e-caption {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    p {
-        text-align: justify;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 30px;
-    }
-    body{
-        background-image: url(https://pixelz.cc/wp-content/uploads/2017/11/league-of-legends-uhd-8k-wallpaper.jpg);
-        background-size: cover;
+    body {
+      background-image: url('https://pixelz.cc/wp-content/uploads/2017/11/league-of-legends-uhd-8k-wallpaper.jpg');
+      background-size: cover;
       background-attachment: fixed;
-        
+      backdrop-filter: blur(10px);
+      color: white;
     }
 
-    body{
-        background-color:transparent;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 2px solid black;
+    .content p {
+      text-align: justify;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      line-height: 30px;
     }
-    .topic{
-        text-align: center;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       
-    }
-    .team{
-        padding-left: 50px;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .box button {
-    padding: 10px 12px;
-    font-size: 15px;
-    background-color: #0074D9;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 20px;
-}
 
-.box button:hover {
-    background-color: #9d04ef;
-}
-.button{
-    align-items: center;
-    align-content: center;
-}
+    .form-label, .form-control {
+      color: white;
+    }
 
-  .end{
-    text-align: center;
-  }  
-   
+    .form-control::placeholder {
+      color: #ccc;
+    }
+
+    .btn-custom {
+      background-color: #0074D9;
+      color: white;
+      border-radius: 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #9d04ef;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+    }
+
+    .end {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+    }
   </style>
 </head>
 <body>
-    <div class="image">
-            <img src="https://static.lolwallpapers.net/2014/08/lol-champions-8.jpg" alt="Image 1" width="300" height="200">
-    
-      
-        <!-- Add detailed content about Free Fire here -->
-        <div class="content">
-            
-        <p>League of Legends is a popular multiplayer online battle arena (MOBA) game developed by Riot Games. In this game, players control characters known as champions, each with a unique set of abilities. As of 2023, there are over 160 champions available to play1. The game is played from an isometric perspective, and the objective is to work as a team to defeat the enemy team by destroying their nexus before they destroy yours.
-            League of Legends has received generally positive reviews; critics have highlighted its accessibility, character designs, and production value. The game's long lifespan has resulted in a critical reappraisal, with reviews trending positively; it is considered one of the greatest video games ever made. However, negative and abusive in-game player behavior, criticized since the game's early days, persists despite Riot's attempts to fix the problem. In 2019, League regularly peaked at eight million concurrent players, and its popularity has led to tie-ins such as music, comic books, short stories, and the animated series Arcane. Its success has spawned several spin-off video games, including League of Legends: Wild Rift, a mobile version; Legends of Runeterra, a digital collectible card game; and Ruined King: A League of Legends Story, a turn-based role-playing game, among others. A massively multiplayer online role-playing game based on the property is in development.
 
-League of Legends is the world's largest esport, with an international competitive scene consisting of multiple regional leagues that culminate in an annual League of Legends World Championship. The 2019 event registered over 100 million unique viewers, peaking at a concurrent viewership of 44 million during the finals. Domestic and international events have been broadcast on livestreaming websites such as Twitch, YouTube, Bilibili, and the cable television sports channel ESPN.
-        </p>
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h1 class="text-white">League of Legends</h1>
+    </div>
+
+    <div class="text-center mb-4">
+      <img src="https://static.lolwallpapers.net/2014/08/lol-champions-8.jpg" alt="League Image" class="img-fluid" width="300" />
+    </div>
+
+    <div class="content mb-5 px-3">
+      <p>
+        League of Legends is a popular multiplayer online battle arena (MOBA) game developed by Riot Games. Players control champions with unique abilities, with over 160 champions as of 2023. The objective is to destroy the enemy’s nexus. LoL has become the world’s biggest esport with millions of players and viewers globally. Riot has expanded the universe with spin-offs, music, comics, and the hit animated series *Arcane*. 
+      </p>
+    </div>
+
+    <div class="card p-4">
+      <h2 class="text-white mb-4">TEAM/SQUAD REGISTRATION</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Player 1 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 1 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 1 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 1 UID">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 2 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 2 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 2 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 2 UID">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 3 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 3 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 3 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 3 UID">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 4 Name</label>
+            <input type="text" class="form-control" placeholder="Enter Player 4 Name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Player 4 UID</label>
+            <input type="text" class="form-control" placeholder="Enter Player 4 UID">
+          </div>
         </div>
-        <!-- Customize the layout and styling as needed -->
-    
-    <div class="team">
-        <h2>TEAM/SQUAD REGISTRATION</h2>
-        <label for="name">PLAYER 1 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 1 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 2 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 2 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 3 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 3 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 4 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 4 UID</label>
-        <input type="text"><br><br>
-        <button class="button">sumit</button>
-        <button class="button">cancel</button>
-        
+
+        <div class="mt-4 d-flex gap-3">
+          <button type="submit" class="btn btn-custom">Submit</button>
+          <button type="reset" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
     </div>
-    <h1 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h1>
-    </div>
+
+    <h3 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h3>
+  </div>
+
 </body>
 </html>

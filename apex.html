@@ -1,111 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div class="topic"><h1>Apex Legends</h1> </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Legends</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <style>
- e-caption {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    p {
-        text-align: justify;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        padding-left: 20px;
-        padding-right: 20px;
-        line-height: 30px;
-    }
-    body{
-        background-image: url(https://anderbot.com/wp-content/uploads/2021/02/Apex-Legends4.jpg);
-        background-size: cover;
+    body {
+      background-image: url("https://anderbot.com/wp-content/uploads/2021/02/Apex-Legends4.jpg");
+      background-size: cover;
       background-attachment: fixed;
-        
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 2px solid black;
+      color: white;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
-    body{
-        background-color:transparent;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 2px solid black;
+    .topic h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
     }
-    .topic{
-        text-align: center;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       
-    }
-    .team{
-        padding-left: 50px;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .box button {
-    padding: 10px 12px;
-    font-size: 15px;
-    background-color: #0074D9;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 20px;
-}
 
-.box button:hover {
-    background-color: #9d04ef;
-}
-.button{
-    align-items: center;
-    align-content: center;
-}
+    .content p {
+      text-align: justify;
+      line-height: 1.8;
+    }
 
-  .end{
-    text-align: center;
-  }  
-   
+    .image img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .form-label {
+      font-weight: 500;
+    }
+
+    .btn-custom {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #9d04ef;
+    }
+
+    .end {
+      text-align: center;
+      margin-top: 40px;
+      font-weight: bold;
+    }
   </style>
 </head>
-<body>
-    <div class="image">
-            <img src="https://wallpapercave.com/wp/wp7438325.jpg" alt="Image 1" width="300" height="200">
-    
-      
-        <!-- Add detailed content about Free Fire here -->
-        <div class="content">
-            
-        <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment and published by Electronic Arts. It was released for PlayStation 4, Windows, and Xbox One in February 2019, for Nintendo Switch in March 2021, and for PlayStation 5 and Xbox Series X/S in March 2022. A mobile version of the game designed for touchscreens titled Apex Legends Mobile was released in May 2022 on Android and iOS. The game supports cross-platform play, excluding the aforementioned mobile platforms.
 
-            Before the match, players form into two- or three-player squads, and select from pre-designed characters with distinctive abilities, known as "Legends". The game has two gameplay modes. In "Battle Royale", up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat. The available play area on the island shrinks over time, forcing players to keep moving or else find themselves outside the play area which can be fatal. The final team alive wins the round. In "Arenas", players form into three-player squads and fight against another squad in a 3v3 team deathmatch over a series of rounds to determine the winner of the match. Teams win when their team has at least 3 points and is 2 points ahead.
-        </p>
+<body>
+  <div class="container py-5">
+    <div class="topic">
+      <h1>Apex Legends</h1>
+    </div>
+
+    <div class="image my-4">
+      <img src="https://wallpapercave.com/wp/wp7438325.jpg" alt="Apex Legends" class="img-fluid" width="300" height="200" />
+    </div>
+
+    <div class="content">
+      <p>
+        Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment and published by Electronic Arts.
+        It was released for PlayStation 4, Windows, and Xbox One in February 2019, for Nintendo Switch in March 2021, and for PlayStation 5 and Xbox Series X/S in March 2022.
+        A mobile version of the game designed for touchscreens titled Apex Legends Mobile was released in May 2022 on Android and iOS. The game supports cross-platform play, excluding the aforementioned mobile platforms.
+        <br /><br />
+        Before the match, players form into two- or three-player squads, and select from pre-designed characters with distinctive abilities, known as "Legends".
+        The game has two gameplay modes. In "Battle Royale", up to 20 three-person squads or 30 two-person duos land on an island and search for weapons and supplies before attempting to defeat all other players in combat.
+        The available play area on the island shrinks over time, forcing players to keep moving or else find themselves outside the play area which can be fatal. The final team alive wins the round.
+        In "Arenas", players form into three-player squads and fight against another squad in a 3v3 team deathmatch over a series of rounds to determine the winner of the match.
+        Teams win when their team has at least 3 points and is 2 points ahead.
+      </p>
+    </div>
+
+    <div class="team mt-5">
+      <h2 class="text-center">Team/Squad Registration</h2>
+      <form class="row g-3 mt-4">
+        <!-- Player 1 -->
+        <div class="col-md-6">
+          <label class="form-label">Player 1 Name</label>
+          <input type="text" class="form-control" />
         </div>
-        <!-- Customize the layout and styling as needed -->
-    
-    <div class="team">
-        <h2>TEAM/SQUAD REGISTRATION</h2>
-        <label for="name">PLAYER 1 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 1 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 2 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 2 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 3 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 3 UID</label>
-        <input type="text"><br><br>
-        <label for="name">PLAYER 4 NAME</label>
-        <input type="text"><br><br>
-        <label for="text">PLAYER 4 UID</label>
-        <input type="text"><br><br>
-        <button class="button">sumit</button>
-        <button class="button">cancel</button>
-        
+        <div class="col-md-6">
+          <label class="form-label">Player 1 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <!-- Player 2 -->
+        <div class="col-md-6">
+          <label class="form-label">Player 2 Name</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Player 2 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <!-- Player 3 -->
+        <div class="col-md-6">
+          <label class="form-label">Player 3 Name</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Player 3 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <!-- Player 4 -->
+        <div class="col-md-6">
+          <label class="form-label">Player 4 Name</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Player 4 UID</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <!-- Buttons -->
+        <div class="col-12 d-flex justify-content-center gap-3 mt-3">
+          <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+          <button type="reset" class="btn btn-secondary btn-custom">Cancel</button>
+        </div>
+      </form>
     </div>
+
     <h1 class="end">THANKS FOR YOUR REGISTRATION.!!! SEE YOU THERE.!!!</h1>
-    </div>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

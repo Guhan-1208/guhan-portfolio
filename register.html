@@ -1,88 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Games</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            background-image: url(https://images.pexels.com/photos/7915289/pexels-photo-7915289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+  <style>
+    body {
+      background-image: url('https://images.pexels.com/photos/7915289/pexels-photo-7915289.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+    }
 
-        .image-caption {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        h1{
-            text-align: center;
-            padding-top: 50px;
-            color: white;
-        }
-        .box{
-          
-          background-color: #020e1664;
-    
-        }
-        a{
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+    .overlay-box {
+      background-color: rgba(2, 14, 22, 0.6);
+      padding: 50px 20px;
+      border-radius: 10px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: none;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 1rem;
+      color: white;
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="box">
-    <h1>GAMES REGISTRATION</h1><br><br><br>
-    <div class="image-grid">
+
+  <div class="container my-5 overlay-box">
+    <h1 class="text-center mb-5">GAMES REGISTRATION</h1>
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="lol.html">
-            <img src="https://static.lolwallpapers.net/2014/08/lol-champions-8.jpg" alt="Image 1">
-            <div class="image-caption">LEAGUE  OF LEGENDS</div>
+          <div class="card">
+            <img src="https://static.lolwallpapers.net/2014/08/lol-champions-8.jpg" class="card-img-top" alt="League of Legends">
+            <div class="card-body">
+              <h5 class="card-title">LEAGUE OF LEGENDS</h5>
+            </div>
+          </div>
         </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="fn.html">
-            <img src="https://cdn2.unrealengine.com/7up-3840x2160-c93d04c02c26.jpg" alt="Image 2">
-            <div class="image-caption">FORTNITE</div>
+          <div class="card">
+            <img src="https://cdn2.unrealengine.com/7up-3840x2160-c93d04c02c26.jpg" class="card-img-top" alt="Fortnite">
+            <div class="card-body">
+              <h5 class="card-title">FORTNITE</h5>
+            </div>
+          </div>
         </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="apex.html">
-            <img src="https://wallpapercave.com/wp/wp7438325.jpg" alt="Image 3">
-            <div class="image-caption">APEX LEGENDS</div>
+          <div class="card">
+            <img src="https://wallpapercave.com/wp/wp7438325.jpg" class="card-img-top" alt="Apex Legends">
+            <div class="card-body">
+              <h5 class="card-title">APEX LEGENDS</h5>
+            </div>
+          </div>
         </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="valo.html">
-            <img src="https://images.hdqwalls.com/wallpapers/valorant-phoenix-and-jett-4k-uu.jpg" alt="Image 4">
-            <div class="image-caption">VALORANT</div>
+          <div class="card">
+            <img src="https://images.hdqwalls.com/wallpapers/valorant-phoenix-and-jett-4k-uu.jpg" class="card-img-top" alt="Valorant">
+            <div class="card-body">
+              <h5 class="card-title">VALORANT</h5>
+            </div>
+          </div>
         </a>
-        <a href="cod.html">
-            <img src="https://i0.wp.com/gadgets-africa.com/wp-content/uploads/2019/11/ycuWtgZ9xLDcCsNk3q6J2c.jpg?fit=1920%2C1080&ssl=1" alt="Image 5">
-            <div class="image-caption">CALL OF DUTY MOBILE</div>
-        </a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="codwz.html">
-            <img src="https://cdn1.dotesports.com/wp-content/uploads/2021/06/14121316/codwz25.jpg" alt="Image 6">
-            <div class="image-caption">CALL OF DUTY - WARZONE</div>
+          <div class="card">
+            <img src="https://cdn1.dotesports.com/wp-content/uploads/2021/06/14121316/codwz25.jpg" class="card-img-top" alt="COD Warzone">
+            <div class="card-body">
+              <h5 class="card-title">CALL OF DUTY - WARZONE</h5>
+            </div>
+          </div>
         </a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="ff.html">
-            <img src="https://wallpapercave.com/wp/wp8348501.jpg" alt="Image 7">
-            <div class="image-caption">FREE FIRE </div>
+          <div class="card">
+            <img src="https://wallpapercave.com/wp/wp8348501.jpg" class="card-img-top" alt="Free Fire">
+            <div class="card-body">
+              <h5 class="card-title">FREE FIRE</h5>
+            </div>
+          </div>
         </a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <a href="bgmi.html">
-            <img src="https://wallpapercave.com/wp/wp9427697.jpg" alt="Image 8">
-            <div class="image-caption">BATTLEGROUNDS MOBILE INDIA</div>
+          <div class="card">
+            <img src="https://wallpapercave.com/wp/wp9427697.jpg" class="card-img-top" alt="BGMI">
+            <div class="card-body">
+              <h5 class="card-title">BATTLEGROUNDS MOBILE INDIA</h5>
+            </div>
+          </div>
         </a>
-        
-        <!-- Add more images as needed -->
+      </div>
+
     </div>
-</div>
+  </div>
+
 </body>
 </html>

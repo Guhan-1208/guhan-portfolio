@@ -3,29 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>About Me</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Open+Sans">
-    <link rel="stylesheet" href="aboutstyle.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Open+Sans" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('./photos/aboutbg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+
+        .glass-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 2px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .glass-box {
+                padding: 1.5rem;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .glass-box {
+                padding: 1rem;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
-<body class="outer">
-    
-    <div class="outbox">
-        <br>
-        <h1>ABOUT ME</h1><br>
-        
-        <p>Hey there, I'm Guhan! I'm currently on a journey to earn my B.Tech degree.
-        <br> Alongside my academic pursuits, I've developed a deep passion for technology and the arts. <br>
-        As a full-stack developer, I have a solid foundation in creating dynamic web applications. <br>
-        My true creative outlets lie in video editing and photography, where I tell compelling visual stories through the lens,
-        capturing moments that speak volumes. <br> My video editing skills allow me to weave these moments into captivating narratives,
-        ensuring each frame is meaningful and visually stunning.
-        <br>I've also delved into IoT projects using Arduino, bringing innovation to life with smart solutions. <br>
-        One of my notable achievements is developing a frontend page for esports registration, showcasing my ability to create seamless
-        and engaging user experiences. <br>Whether I'm coding a new feature, editing a breathtaking scene, or working on cutting-edge IoT 
-        projects, I thrive on the fusion of technology and creativity, always pushing the boundaries of what's possible.</p><br><br>
+<body>
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="glass-box col-12 col-md-10 col-lg-8">
+            <h1 class="mb-4">ABOUT ME</h1>
+            <p>
+                Hey there, I'm Guhan! I'm currently on a journey to earn my B.Tech degree.<br>
+                Alongside my academic pursuits, I've developed a deep passion for technology and the arts.<br>
+                As a full-stack developer, I have a solid foundation in creating dynamic web applications.<br>
+                My true creative outlets lie in video editing and photography, where I tell compelling visual stories through the lens,
+                capturing moments that speak volumes.<br>
+                My video editing skills allow me to weave these moments into captivating narratives,
+                ensuring each frame is meaningful and visually stunning.<br>
+                I've also delved into IoT projects using Arduino, bringing innovation to life with smart solutions.<br>
+                One of my notable achievements is developing a frontend page for esports registration, showcasing my ability to create seamless
+                and engaging user experiences.<br>
+                Whether I'm coding a new feature, editing a breathtaking scene, or working on cutting-edge IoT 
+                projects, I thrive on the fusion of technology and creativity, always pushing the boundaries of what's possible.
+            </p>
+        </div>
     </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
