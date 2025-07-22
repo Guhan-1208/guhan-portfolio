@@ -250,7 +250,7 @@
           <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./certificate.html">Certificates</a>
+          <a class="nav-link" href="#certificates">Certificates</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -344,6 +344,90 @@
       </div>
     </div>
   </section>
+  <!-- Certificates Section -->
+<section id="certificates" class="my-5" data-aos="fade-up">
+  <h2 class="text-center mb-4" style="color:#4db5ff;">Certificates</h2>
+  <div class="container">
+    <div class="row g-4 justify-content-center" id="certificate-gallery">
+
+      <!-- Certificate Item Template (Repeat as needed) -->
+      <div class="col-md-4 cert-item">
+        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+          <img src="./certificates/web development internship.jpeg" class="img-fluid rounded shadow cert-img" alt="Web Development Internship" />
+          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+            <p class="small">Internship on Digital Marketing & Web Development at Layercodes Technologies</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 cert-item">
+        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+          <img src="./certificates/AICTE - AIML.jpeg" class="img-fluid rounded shadow cert-img" alt="AICTE AIML Internship" />
+          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+            <p class="small">AICTE-Google AI/ML Virtual Internship via EduSkills</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 cert-item">
+        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+          <img src="./certificates/full stack development.jpeg" class="img-fluid rounded shadow cert-img" alt="Full Stack Development" />
+          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+            <p class="small">Full Stack Course at Mailam Engineering College with VEI Technologies</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Certificates (toggle with JS) -->
+      <div id="more-certificates" class="row g-4 justify-content-center mt-3 d-none">
+        <div class="col-md-4 cert-item">
+          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+            <img src="./certificates/html5.jpeg" class="img-fluid rounded shadow cert-img" alt="HTML5" />
+            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">HTML5 Application Development Certified by CertNexus</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 cert-item">
+          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+            <img src="./certificates/ibm.jpeg" class="img-fluid rounded shadow cert-img" alt="IBM Cloud" />
+            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">IBM SkillsBuild - Journey to Cloud Certification</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 cert-item">
+          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+            <img src="./certificates/ML internship.jpeg" class="img-fluid rounded shadow cert-img" alt="ML Internship" />
+            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">Machine Learning Internship at VEI Technologies Pvt. Ltd.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 cert-item">
+          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+            <img src="./certificates/mongodb.jpeg" class="img-fluid rounded shadow cert-img" alt="MongoDB Intro" />
+            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">Introduction to MongoDB Certification by MongoDB, Inc.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="toggle-certificates" class="btn btn-primary">Load More</button>
+    </div>
+     <div class="text-center mt-4">
+      <button id="toggle-certificates" class="btn btn-primary"><a href="./certificate.html" style="text-decoration: none;color: white;">Description</a></button>
+    </div>
+  </div>
+</section>
+
 
   <!-- Contact Section -->
   <section id="contact" data-aos="fade-up" class="my-5">
@@ -361,7 +445,7 @@
             value="91e86fe4-c80d-4c31-93d0-f205f1a5721a"
           />
           <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label" >Name</label>
             <input
               id="name"
               name="name"
@@ -404,7 +488,7 @@
     <p>© 2024 Guhan K. All rights reserved.</p>
     <p>
       Connect with me:
-      <a href="https://www.linkedin.com/in/guhan-k-168885259" target="_blank">LinkedIn</a>,
+      <a href="https://www.linkedin.com/in/guhan-k-168885259/" target="_blank">LinkedIn</a>,
       <a href="https://www.instagram.com/guhan.insta/" target="_blank">Instagram</a>,
       <a href="https://wa.me/+916385233472" target="_blank">WhatsApp</a>
     </p>
@@ -439,6 +523,63 @@
         }
       });
     });
+     document.querySelectorAll('.cert-item').forEach(card => {
+    const details = card.querySelector('.cert-details');
+    card.addEventListener('mouseenter', () => details.style.opacity = 1);
+    card.addEventListener('mouseleave', () => details.style.opacity = 0);
+  });
+
+  const toggleBtn = document.getElementById('toggle-certificates');
+  const moreCerts = document.getElementById('more-certificates');
+
+  toggleBtn.addEventListener('click', () => {
+    moreCerts.classList.toggle('d-none');
+    toggleBtn.textContent = moreCerts.classList.contains('d-none') ? 'Load More' : 'View Less';
+  });
+
+  
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    // Clear previous errors
+    document.querySelectorAll(".form-error").forEach(el => el.remove());
+
+    let isValid = true;
+
+    // Simple validation
+    if (name.value.trim() === "") {
+      showError(name, "Name is required.");
+      isValid = false;
+    }
+
+    if (email.value.trim() === "") {
+      showError(email, "Email is required.");
+      isValid = false;
+    } else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.value.trim())) {
+      showError(email, "Please enter a valid email address.");
+      isValid = false;
+    }
+
+    if (message.value.trim() === "") {
+      showError(message, "Message cannot be empty.");
+      isValid = false;
+    }
+
+    if (!isValid) {
+      e.preventDefault(); // Stop form from submitting
+    }
+
+    function showError(input, msg) {
+      const error = document.createElement("div");
+      error.className = "form-error text-danger mt-1 small";
+      error.textContent = msg;
+      input.parentNode.appendChild(error);
+    }
+  });
+
+
   </script>
 </body>
 </html>
