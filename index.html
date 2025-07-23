@@ -179,6 +179,11 @@
       border-radius: 5px;
       transition: border-color 0.3s ease;
     }
+    ::placeholder {
+  color: white !important;
+  opacity: 1;
+}
+
     #contact form .form-control:focus {
       border-color: #3a8dd5;
       box-shadow: none;
@@ -369,14 +374,6 @@
         </div>
       </div>
 
-      <div class="col-md-4 cert-item">
-        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-          <img src="./certificates/full stack development.jpeg" class="img-fluid rounded shadow cert-img" alt="Full Stack Development" />
-          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-            <p class="small">Full Stack Course at Mailam Engineering College with VEI Technologies</p>
-          </div>
-        </div>
-      </div>
 
       <!-- Hidden Certificates (toggle with JS) -->
       <div id="more-certificates" class="row g-4 justify-content-center mt-3 d-none">
@@ -400,15 +397,6 @@
 
         <div class="col-md-4 cert-item">
           <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-            <img src="./certificates/ML internship.jpeg" class="img-fluid rounded shadow cert-img" alt="ML Internship" />
-            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-              <p class="small">Machine Learning Internship at VEI Technologies Pvt. Ltd.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 cert-item">
-          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
             <img src="./certificates/mongodb.jpeg" class="img-fluid rounded shadow cert-img" alt="MongoDB Intro" />
             <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
               <p class="small">Introduction to MongoDB Certification by MongoDB, Inc.</p>
@@ -423,7 +411,7 @@
       <button id="toggle-certificates" class="btn btn-primary">Load More</button>
     </div>
      <div class="text-center mt-4">
-      <button id="toggle-certificates" class="btn btn-primary"><a href="./certificate.html" style="text-decoration: none;color: white;">Description</a></button>
+      <button id="toggle-certificates" class="btn btn-primary"><a href="./certificate.html" style="text-decoration: none;color: white;">Certificate Gallery</a></button>
     </div>
   </div>
 </section>
