@@ -530,46 +530,47 @@
   });
 
   
-  document.querySelector("form").addEventListener("submit", function (e) {
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const message = document.getElementById("message");
+ document.querySelector("form").addEventListener("submit", function (e) {
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
 
-    // Clear previous errors
-    document.querySelectorAll(".form-error").forEach(el => el.remove());
+  // Clear previous errors
+  document.querySelectorAll(".form-error").forEach(el => el.remove());
 
-    let isValid = true;
+  let isValid = true;
 
-    // Simple validation
-    if (name.value.trim() === "") {
-      showError(name, "Name is required.");
-      isValid = false;
-    }
+  // Simple validation
+  if (name.value.trim() === "") {
+    showError(name, "Name is required.");
+    isValid = false;
+  }
 
-    if (email.value.trim() === "") {
-      showError(email, "Email is required.");
-      isValid = false;
-    } else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.value.trim())) {
-      showError(email, "Please enter a valid email address.");
-      isValid = false;
-    }
+  if (email.value.trim() === "") {
+    showError(email, "Email is required.");
+    isValid = false;
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    showError(email, "Please enter a valid email address.");
+    isValid = false;
+  }
 
-    if (message.value.trim() === "") {
-      showError(message, "Message cannot be empty.");
-      isValid = false;
-    }
+  if (message.value.trim() === "") {
+    showError(message, "Message cannot be empty.");
+    isValid = false;
+  }
 
-    if (!isValid) {
-      e.preventDefault(); // Stop form from submitting
-    }
+  if (!isValid) {
+    e.preventDefault(); // Stop form from submitting
+  }
 
-    function showError(input, msg) {
-      const error = document.createElement("div");
-      error.className = "form-error text-danger mt-1 small";
-      error.textContent = msg;
-      input.parentNode.appendChild(error);
-    }
-  });
+  function showError(input, msg) {
+    const error = document.createElement("div");
+    error.className = "form-error text-danger mt-1 small";
+    error.textContent = msg;
+    input.parentNode.appendChild(error);
+  }
+});
+
 
 
   </script>
