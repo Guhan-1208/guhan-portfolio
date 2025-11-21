@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,16 +11,10 @@
   <title>Guhan K - Portfolio</title>
 
   <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -28,8 +23,10 @@
     /* Base */
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #0a0f23; /* dark navy */
-      color: #e0e6f8; /* light text */
+      background-color: #0a0f23;
+      /* dark navy */
+      color: #e0e6f8;
+      /* light text */
       scroll-behavior: smooth;
     }
 
@@ -38,6 +35,7 @@
       text-decoration: none;
       transition: color 0.3s ease;
     }
+
     a:hover {
       color: #3a8dd5;
       text-decoration: underline;
@@ -52,21 +50,25 @@
       top: 0;
       z-index: 1030;
     }
+
     .navbar-brand {
       font-weight: 700;
       font-size: 1.5rem;
       color: #4db5ff;
     }
+
     .navbar-nav .nav-link {
       color: #cbd6f0;
       font-weight: 500;
       margin-left: 1.5rem;
       position: relative;
     }
+
     .navbar-nav .nav-link.active,
     .navbar-nav .nav-link:hover {
       color: #4db5ff;
     }
+
     .navbar-nav .nav-link.active::after {
       content: '';
       position: absolute;
@@ -77,13 +79,14 @@
       background-color: #4db5ff;
       border-radius: 1px;
     }
-    .navbar-toggler {
-  border-color: #4db5ff;
-}
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(77,181,255,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+    .navbar-toggler {
+      border-color: #4db5ff;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(77,181,255,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
 
 
     /* Sections */
@@ -102,12 +105,14 @@
       align-items: center;
       text-align: center;
     }
+
     #hero h1 {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 1rem;
       color: #4db5ff;
     }
+
     #hero p.lead {
       font-size: 1.3rem;
       max-width: 600px;
@@ -124,6 +129,7 @@
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
+
     .btn-primary:hover {
       background-color: #3a8dd5;
     }
@@ -137,18 +143,61 @@
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease;
     }
+
     #skills .skill-item:hover {
       transform: translateY(-5px);
     }
+
     #skills .skill-item h5 {
       color: #4db5ff;
       margin-bottom: 0.75rem;
     }
+
     #skills .skill-item p {
       font-size: 0.9rem;
       color: #cbd6f0;
       margin: 0;
     }
+    /* Resume zoom styles */
+.resume-image-wrap {
+  cursor: zoom-in;
+  touch-action: none; /* help with touch dragging */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base image: slightly scaled-in when modal opens (we animate to scale 1) */
+.resume-img {
+  transform-origin: center center;
+  transition: transform 350ms cubic-bezier(.22,.9,.3,1), box-shadow 250ms;
+  transform: scale(1);
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+/* When clicked to zoom */
+.resume-img.zoomed {
+  cursor: grab;
+  transform: scale(1.6); /* default zoom level when toggled */
+  transition: transform 350ms cubic-bezier(.22,.9,.3,1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* While dragging change cursor */
+.resume-img.dragging {
+  cursor: grabbing;
+}
+
+/* Optional: smooth intro zoom on modal show */
+.resume-img.intro {
+  transform: scale(0.96);
+  opacity: 0.96;
+}
+
 
     /* Projects */
     #projects .card {
@@ -158,19 +207,24 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
       transition: transform 0.3s ease;
     }
+
     #projects .card:hover {
       transform: translateY(-8px);
     }
+
     #projects .card-title {
       color: #4db5ff;
       font-weight: 700;
     }
+
     #projects .card-text {
       color: #cbd6f0;
     }
+
     #projects .btn-primary {
       font-weight: 600;
     }
+
     #projects img {
       border-radius: 10px 10px 0 0;
     }
@@ -183,10 +237,11 @@
       border-radius: 5px;
       transition: border-color 0.3s ease;
     }
+
     ::placeholder {
-  color: white !important;
-  opacity: 1;
-}
+      color: white !important;
+      opacity: 1;
+    }
 
     #contact form .form-control:focus {
       border-color: #3a8dd5;
@@ -194,10 +249,12 @@
       background-color: #232a6f;
       color: #fff;
     }
+
     #contact label {
       color: #4db5ff;
       font-weight: 600;
     }
+
     #contact .btn-primary {
       width: 100%;
     }
@@ -217,66 +274,66 @@
       #hero h1 {
         font-size: 2.5rem;
       }
+
       nav.navbar {
         padding: 1rem;
       }
+
       .navbar-nav .nav-link {
         margin-left: 1rem;
       }
     }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
- <nav class="navbar navbar-expand-lg" role="navigation">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#hero">Guhan K</a>
+  <nav class="navbar navbar-expand-lg" role="navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#hero">Guhan K</a>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="#hero">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-    <a 
-      class="nav-link" 
-      href="https://www.figma.com/proto/dLdik9a5HmeClfbPBs5JjP/Portfolio?page-id=0%3A1&node-id=3-2&viewport=158%2C121%2C0.98&t=PcMASfzkjBptzX1j-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A2" 
-      target="_blank"
-    >
-      Figma Portfolio
-    </a>
-  </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#certificates">Certificates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+              href="https://www.figma.com/proto/dLdik9a5HmeClfbPBs5JjP/Portfolio?page-id=0%3A1&node-id=3-2&viewport=158%2C121%2C0.98&t=PcMASfzkjBptzX1j-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A2"
+              target="_blank">
+              Figma Portfolio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#resumeModal">
+              Resume
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certificates">Certificates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
   <!-- Hero Section -->
@@ -285,9 +342,7 @@
     <p class="lead" data-aos="fade-up" data-aos-delay="200">
       Front-end Developer & Creative Video Editor
     </p>
-    <a href="#projects" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400"
-      >See My Work</a
-    >
+    <a href="#projects" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">See My Work</a>
   </section>
 
   <!-- About Section -->
@@ -299,6 +354,38 @@
       When I’m not coding, I love exploring new tools and arts. Let's build something awesome!
     </p>
   </section>
+  
+  <div class="text-center mt-4">
+  <button 
+    class="btn btn-primary px-4 py-2" 
+    data-bs-toggle="modal" 
+    data-bs-target="#resumeModal"
+  >
+    View Resume
+  </button>
+</div>
+
+    <!-- Resume Preview Modal -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="background-color: #0a0f23; border: 1px solid #4db5ff;">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" style="color: #4db5ff;">My Resume</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center" style="min-height:400px;">
+       
+        <div class="resume-image-wrap" style="max-width:100%; width:100%; overflow:hidden;">
+          <img id="resumeImage" src="./photos/Guhan-photo-resume.png" alt="Resume Preview" class="img-fluid rounded resume-img" />
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <a href="./photos/Guhan-photo-resume.png" download class="btn btn-primary">Download Resume</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
   <!-- Skills Section -->
   <section id="skills" data-aos="fade-up" class="my-5">
@@ -325,11 +412,8 @@
     <div class="row g-4 justify-content-center">
       <div class="col-md-6 col-lg-4">
         <div class="card">
-          <img
-            src="./projects/webpage/Screenshot 2025-01-31 162231.png"
-            class="card-img-top"
-            alt="Esports Registration Frontend"
-          />
+          <img src="./projects/webpage/Screenshot 2025-01-31 162231.png" class="card-img-top"
+            alt="Esports Registration Frontend" />
           <div class="card-body">
             <h5 class="card-title">Esports Registration Frontend</h5>
             <p class="card-text">
@@ -341,135 +425,140 @@
       </div>
       <div class="col-md-6 col-lg-4">
         <div class="card">
-          <img
-            src="./projects/iot.png"
-            class="card-img-top"
-            alt="Soil Nutrition Dashboard"
-          />
+          <img src="./projects/iot.png" class="card-img-top" alt="Soil Nutrition Dashboard" />
           <div class="card-body">
             <h5 class="card-title">Soil Nutrition Monitoring</h5>
             <p class="card-text">
               IoT based dashboard hosted on Blynk for sustainable agriculture monitoring.
             </p>
-            <a
-              href="./projects/IoT based soil nutrition monitoring system.pdf"
-              target="_blank"
-              class="btn btn-primary"
-              >View Report</a
-            >
+            <a href="./projects/IoT based soil nutrition monitoring system.pdf" target="_blank"
+              class="btn btn-primary">View Report</a>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-4">
-  <div class="card">
-    <img
-      src="./projects/Figma-Portfolio.png"
-      class="card-img-top"
-      alt="Figma Portfolio Design"
-    />
-    <div class="card-body">
-      <h5 class="card-title">Figma Portfolio Design</h5>
-      <p class="card-text">
-        A clean and modern portfolio UI/UX design created in Figma, showcasing
-        structured layout, color balance, and smooth navigation.
-      </p>
-      <a
-        href="https://www.figma.com/proto/dLdik9a5HmeClfbPBs5JjP/Portfolio?page-id=0%3A1&node-id=3-2&viewport=158%2C121%2C0.98&t=PcMASfzkjBptzX1j-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A2"
-        class="btn btn-primary"
-        target="_blank"
-      >
-        View Figma Design
-      </a>
-    </div>
-  </div>
-</div>
+        <div class="card">
+          <img src="./projects/Figma-Portfolio.png" class="card-img-top" alt="Figma Portfolio Design" />
+          <div class="card-body">
+            <h5 class="card-title">Figma Portfolio Design</h5>
+            <p class="card-text">
+              A clean and modern portfolio UI/UX design created in Figma, showcasing
+              structured layout, color balance, and smooth navigation.
+            </p>
+            <a href="https://www.figma.com/proto/dLdik9a5HmeClfbPBs5JjP/Portfolio?page-id=0%3A1&node-id=3-2&viewport=158%2C121%2C0.98&t=PcMASfzkjBptzX1j-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A2"
+              class="btn btn-primary" target="_blank">
+              View Figma Design
+            </a>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
   <!-- Certificates Section -->
-<section id="certificates" class="my-5" data-aos="fade-up">
-  <h2 class="text-center mb-4" style="color:#4db5ff;">Certificates</h2>
-  <div class="container">
-    <div class="row g-4 justify-content-center" id="certificate-gallery">
+  <section id="certificates" class="my-5" data-aos="fade-up">
+    <h2 class="text-center mb-4" style="color:#4db5ff;">Certificates</h2>
+    <div class="container">
+      <div class="row g-4 justify-content-center" id="certificate-gallery">
 
-      <!-- Certificate Item Template (Repeat as needed) -->
-       <div class="col-md-4 cert-item">
-        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-          <img src="./certificates/Hack2skill-Certificate.png" class="img-fluid rounded shadow cert-img" alt="Hack2Skill Hackathon" />
-          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-            <p class="small">Bharatiya Antariksh Hackathon 2025 - Certificate of Acknowledgement by Hack2Skill & ISRO</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- NEW: RKS Infotech Internship Certificate -->
-      <div class="col-md-4 cert-item">
-        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-          <img src="./certificates/Guhan K -Fullstack.jpg" class="img-fluid rounded shadow cert-img" alt="Fullstack Internship" />
-          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-            <p class="small">Full Stack Development Internship at RKS Infotech, Puducherry</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 cert-item">
-        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-          <img src="./certificates/web development internship.jpeg" class="img-fluid rounded shadow cert-img" alt="Web Development Internship" />
-          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-            <p class="small">Internship on Digital Marketing & Web Development at Layercodes Technologies</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 cert-item">
-        <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-          <img src="./certificates/AICTE - AIML.jpeg" class="img-fluid rounded shadow cert-img" alt="AICTE AIML Internship" />
-          <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-            <p class="small">AICTE-Google AI/ML Virtual Internship via EduSkills</p>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Hidden Certificates (toggle with JS) -->
-      <div id="more-certificates" class="row g-4 justify-content-center mt-3 d-none">
+        <!-- Certificate Item Template (Repeat as needed) -->
         <div class="col-md-4 cert-item">
           <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-            <img src="./certificates/html5.jpeg" class="img-fluid rounded shadow cert-img" alt="HTML5" />
-            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-              <p class="small">HTML5 Application Development Certified by CertNexus</p>
+            <img src="./certificates/Hack2skill-Certificate.png" class="img-fluid rounded shadow cert-img"
+              alt="Hack2Skill Hackathon" />
+            <div
+              class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+              style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">Bharatiya Antariksh Hackathon 2025 - Certificate of Acknowledgement by Hack2Skill & ISRO
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW: RKS Infotech Internship Certificate -->
+        <div class="col-md-4 cert-item">
+          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+            <img src="./certificates/Guhan K -Fullstack.jpg" class="img-fluid rounded shadow cert-img"
+              alt="Fullstack Internship" />
+            <div
+              class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+              style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">Full Stack Development Internship at RKS Infotech, Puducherry</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 cert-item">
+          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+            <img src="./certificates/web development internship.jpeg" class="img-fluid rounded shadow cert-img"
+              alt="Web Development Internship" />
+            <div
+              class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+              style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">Internship on Digital Marketing & Web Development at Layercodes Technologies</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 cert-item">
           <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-            <img src="./certificates/ibm.jpeg" class="img-fluid rounded shadow cert-img" alt="IBM Cloud" />
-            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-              <p class="small">IBM SkillsBuild - Journey to Cloud Certification</p>
+            <img src="./certificates/AICTE - AIML.jpeg" class="img-fluid rounded shadow cert-img"
+              alt="AICTE AIML Internship" />
+            <div
+              class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+              style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+              <p class="small">AICTE-Google AI/ML Virtual Internship via EduSkills</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 cert-item">
-          <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
-            <img src="./certificates/mongodb.jpeg" class="img-fluid rounded shadow cert-img" alt="MongoDB Intro" />
-            <div class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3" style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
-              <p class="small">Introduction to MongoDB Certification by MongoDB, Inc.</p>
+
+        <!-- Hidden Certificates (toggle with JS) -->
+        <div id="more-certificates" class="row g-4 justify-content-center mt-3 d-none">
+          <div class="col-md-4 cert-item">
+            <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+              <img src="./certificates/html5.jpeg" class="img-fluid rounded shadow cert-img" alt="HTML5" />
+              <div
+                class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+                style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+                <p class="small">HTML5 Application Development Certified by CertNexus</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 cert-item">
+            <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+              <img src="./certificates/ibm.jpeg" class="img-fluid rounded shadow cert-img" alt="IBM Cloud" />
+              <div
+                class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+                style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+                <p class="small">IBM SkillsBuild - Journey to Cloud Certification</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 cert-item">
+            <div class="card border-0 bg-transparent text-white position-relative overflow-hidden h-100">
+              <img src="./certificates/mongodb.jpeg" class="img-fluid rounded shadow cert-img" alt="MongoDB Intro" />
+              <div
+                class="cert-details position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-3"
+                style="background-color: rgba(10,15,35,0.95); opacity: 0; transition: opacity 0.3s;">
+                <p class="small">Introduction to MongoDB Certification by MongoDB, Inc.</p>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
+      <div class="text-center mt-4">
+        <button id="toggle-certificates" class="btn btn-primary">Load More</button>
+      </div>
+      <div class="text-center mt-4">
+        <button id="toggle-certificates" class="btn btn-primary"><a href="./certificate.html"
+            style="text-decoration: none;color: white;">Certificate Gallery</a></button>
+      </div>
     </div>
-
-    <div class="text-center mt-4">
-      <button id="toggle-certificates" class="btn btn-primary">Load More</button>
-    </div>
-     <div class="text-center mt-4">
-      <button id="toggle-certificates" class="btn btn-primary"><a href="./certificate.html" style="text-decoration: none;color: white;">Certificate Gallery</a></button>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Contact Section -->
@@ -477,48 +566,21 @@
     <h2 class="text-center mb-4" style="color:#4db5ff;">Contact Me</h2>
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          novalidate
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="91e86fe4-c80d-4c31-93d0-f205f1a5721a"
-          />
+        <form action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="91e86fe4-c80d-4c31-93d0-f205f1a5721a" />
           <div class="mb-3">
-            <label for="name" class="form-label" >Name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              class="form-control"
-              required
-              placeholder="Your full name"
-            />
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" type="text" class="form-control" required placeholder="Your full name" />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              class="form-control"
-              required
-              placeholder="your.email@example.com"
-            />
+            <input id="email" name="email" type="email" class="form-control" required
+              placeholder="your.email@example.com" />
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              class="form-control"
-              required
-              placeholder="Write your message here..."
-            ></textarea>
+            <textarea id="message" name="message" rows="4" class="form-control" required
+              placeholder="Write your message here..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
@@ -566,64 +628,211 @@
         }
       });
     });
-     document.querySelectorAll('.cert-item').forEach(card => {
-    const details = card.querySelector('.cert-details');
-    card.addEventListener('mouseenter', () => details.style.opacity = 1);
-    card.addEventListener('mouseleave', () => details.style.opacity = 0);
-  });
+    document.querySelectorAll('.cert-item').forEach(card => {
+      const details = card.querySelector('.cert-details');
+      card.addEventListener('mouseenter', () => details.style.opacity = 1);
+      card.addEventListener('mouseleave', () => details.style.opacity = 0);
+    });
 
-  const toggleBtn = document.getElementById('toggle-certificates');
-  const moreCerts = document.getElementById('more-certificates');
+    const toggleBtn = document.getElementById('toggle-certificates');
+    const moreCerts = document.getElementById('more-certificates');
 
-  toggleBtn.addEventListener('click', () => {
-    moreCerts.classList.toggle('d-none');
-    toggleBtn.textContent = moreCerts.classList.contains('d-none') ? 'Load More' : 'View Less';
-  });
+    toggleBtn.addEventListener('click', () => {
+      moreCerts.classList.toggle('d-none');
+      toggleBtn.textContent = moreCerts.classList.contains('d-none') ? 'Load More' : 'View Less';
+    });
 
-  
- document.querySelector("form").addEventListener("submit", function (e) {
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-  const message = document.getElementById("message");
 
-  // Clear previous errors
-  document.querySelectorAll(".form-error").forEach(el => el.remove());
+    document.querySelector("form").addEventListener("submit", function (e) {
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const message = document.getElementById("message");
 
-  let isValid = true;
+      // Clear previous errors
+      document.querySelectorAll(".form-error").forEach(el => el.remove());
 
-  // Simple validation
-  if (name.value.trim() === "") {
-    showError(name, "Name is required.");
-    isValid = false;
-  }
+      let isValid = true;
 
-  if (email.value.trim() === "") {
-    showError(email, "Email is required.");
-    isValid = false;
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-    showError(email, "Please enter a valid email address.");
-    isValid = false;
-  }
+      // Simple validation
+      if (name.value.trim() === "") {
+        showError(name, "Name is required.");
+        isValid = false;
+      }
 
-  if (message.value.trim() === "") {
-    showError(message, "Message cannot be empty.");
-    isValid = false;
-  }
+      if (email.value.trim() === "") {
+        showError(email, "Email is required.");
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        showError(email, "Please enter a valid email address.");
+        isValid = false;
+      }
 
-  if (!isValid) {
-    e.preventDefault(); // Stop form from submitting
-  }
+      if (message.value.trim() === "") {
+        showError(message, "Message cannot be empty.");
+        isValid = false;
+      }
 
-  function showError(input, msg) {
-    const error = document.createElement("div");
-    error.className = "form-error text-danger mt-1 small";
-    error.textContent = msg;
-    input.parentNode.appendChild(error);
-  }
-});
+      if (!isValid) {
+        e.preventDefault(); // Stop form from submitting
+      }
+
+      function showError(input, msg) {
+        const error = document.createElement("div");
+        error.className = "form-error text-danger mt-1 small";
+        error.textContent = msg;
+        input.parentNode.appendChild(error);
+      }
+    });
+
+    
+  (function() {
+    const resumeModalEl = document.getElementById('resumeModal');
+    const resumeImage = document.getElementById('resumeImage');
+    let isZoomed = false;
+
+    // Drag state
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let currentTranslateX = 0;
+    let currentTranslateY = 0;
+
+    // Add intro class briefly for a subtle pop when modal opens
+    resumeModalEl.addEventListener('show.bs.modal', () => {
+      resumeImage.classList.add('intro');
+      resumeImage.style.transform = 'scale(0.96)';
+      // Force reflow then normalize to give a slight opening animation
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          resumeImage.classList.remove('intro');
+          resumeImage.style.transform = 'scale(1)';
+        });
+      });
+    });
+
+    // Reset on hide
+    resumeModalEl.addEventListener('hidden.bs.modal', () => {
+      resetZoom();
+    });
+
+    // Click toggle zoom
+    resumeImage.addEventListener('click', (e) => {
+      // don't toggle if we're dragging
+      if (isDragging) return;
+      toggleZoom();
+    });
+
+    function toggleZoom() {
+      isZoomed = !isZoomed;
+      if (isZoomed) {
+        resumeImage.classList.add('zoomed');
+        // ensure translate resets when entering zoom state
+        currentTranslateX = 0;
+        currentTranslateY = 0;
+        applyTranslate();
+      } else {
+        resumeImage.classList.remove('zoomed');
+        resumeImage.classList.remove('dragging');
+        currentTranslateX = 0;
+        currentTranslateY = 0;
+        resumeImage.style.transform = 'scale(1)';
+      }
+    }
+
+    function resetZoom() {
+      isZoomed = false;
+      isDragging = false;
+      resumeImage.classList.remove('zoomed', 'dragging');
+      resumeImage.style.transform = 'scale(1) translate(0px, 0px)';
+      currentTranslateX = 0;
+      currentTranslateY = 0;
+    }
+
+    // Drag / pan when zoomed
+    function applyTranslate() {
+      // Get current scale from computed style (fallback to 1.6)
+      const scale = isZoomed ? 1.6 : 1;
+      resumeImage.style.transform = `scale(${scale}) translate(${currentTranslateX}px, ${currentTranslateY}px)`;
+    }
+
+    // Normalize pointer events to support mouse + touch
+    resumeImage.addEventListener('pointerdown', (e) => {
+      if (!isZoomed) return;
+      isDragging = true;
+      resumeImage.classList.add('dragging');
+      resumeImage.setPointerCapture(e.pointerId);
+      startX = e.clientX;
+      startY = e.clientY;
+    });
+
+    resumeImage.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      startX = e.clientX;
+      startY = e.clientY;
+      currentTranslateX += dx;
+      currentTranslateY += dy;
+
+      // Optional: clamp panning so image doesn't drift too far. Adjust as desired.
+      const maxPan = 120; // px
+      currentTranslateX = Math.max(Math.min(currentTranslateX, maxPan), -maxPan);
+      currentTranslateY = Math.max(Math.min(currentTranslateY, maxPan), -maxPan);
+
+      applyTranslate();
+    });
+
+    resumeImage.addEventListener('pointerup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      resumeImage.classList.remove('dragging');
+      try { resumeImage.releasePointerCapture(e.pointerId); } catch (err) {}
+      // small threshold to treat as click — handled above by isDragging guard
+      setTimeout(() => { isDragging = false; }, 10);
+    });
+
+    resumeImage.addEventListener('pointercancel', () => {
+      isDragging = false;
+      resumeImage.classList.remove('dragging');
+    });
+
+    // Allow double-click to reset to full view
+    resumeImage.addEventListener('dblclick', (e) => {
+      resetZoom();
+    });
+
+    // Prevent image dragging default (browser drag)
+    resumeImage.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Optional: allow wheel to zoom in/out while hovered inside modal
+    resumeImage.addEventListener('wheel', (e) => {
+      if (!resumeModalEl.classList.contains('show')) return;
+      e.preventDefault();
+      const delta = -e.deltaY; // wheel up = zoom in
+      // small step zoom
+      let newScale = isZoomed ? 1.6 : 1;
+      const step = 0.1;
+      if (delta > 0) {
+        newScale = Math.min((isZoomed ? newScale : 1) + step, 3);
+      } else {
+        newScale = Math.max((isZoomed ? newScale : 1) - step, 1);
+      }
+      // apply as inline transform to maintain translations
+      // convert translate values into px
+      resumeImage.style.transform = `scale(${newScale}) translate(${currentTranslateX}px, ${currentTranslateY}px)`;
+      // mark as zoomed if >1.05
+      isZoomed = newScale > 1.05;
+      if (isZoomed) resumeImage.classList.add('zoomed'); else resumeImage.classList.remove('zoomed');
+    }, { passive: false });
+  })();
+
+
 
 
 
   </script>
+
+
 </body>
+
 </html>
